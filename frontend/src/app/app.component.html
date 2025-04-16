@@ -1,0 +1,45 @@
+<header>
+  <a id="skip-content" href="#main">Skip to main content</a>
+  <nav>
+    <span>
+      <ul>
+        <h1>WebPlots Plot Generator</h1>
+      </ul>
+    </span>
+    <span>
+      <ul>
+        <figure><a href="https://github.com/Darshula" title="Darshula | Github"><img src="github-mark.svg"
+              alt="Github Logo"></a></figure>
+      </ul>
+      <ul>
+        <figure><a href="https://www.linkedin.com/in/tanmay-kulkarni12" title="tanmay-kulkarni12 | Linkedin"><img
+              src="inbug-black.png" alt="Linkedin Logo"></a></figure>
+      </ul>
+    </span>
+  </nav>
+</header>
+<main id="main">
+
+  <div class="container">
+    <form (ngSubmit)="submitScript()" class="form" style="margin-top: 1em;">
+      <select [(ngModel)]="language" name="language" id="language" class="input" style="width: max-content;">
+        <option value="r">R</option>
+        <option value="python">Python</option>
+      </select>
+
+      <textarea [(ngModel)]="code" name="code" class="textarea" placeholder="" required></textarea>
+
+      <button type="submit" class="btn" style="width: max-content;">Generate</button>
+    </form>
+  </div>
+  <div style="border: solid; border-color: #e0e0e0; border-width: 1px;"></div>
+  <div class="container">
+    <div *ngIf="loading" class="spinner-container">
+      <div class="spinner"></div>
+    </div>
+
+    <div *ngIf="iframeUrl && !loading" class="plot">
+      <iframe [src]="iframeUrl" width="100%" height="75%" frameborder="0"></iframe>
+    </div>
+  </div>
+</main>

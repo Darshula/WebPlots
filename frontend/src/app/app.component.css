@@ -1,0 +1,101 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 4em;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav span {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+h1 {
+  margin: 0;
+}
+
+figure {
+  margin: 0%;
+}
+
+img {
+  height: 2em;
+}
+
+#skip-content {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip-content:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.container {
+  width: 50%;
+  padding: 1vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form * {
+  margin-top: 1em;
+}
+
+textarea {
+  height: 75vh;
+  resize: none;
+}
+
+.spinner-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 10vmin;
+  height: 10vmin;
+  border: 5px solid #e0e0e0;
+  border-top: 4px solid #0077ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.plot {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
