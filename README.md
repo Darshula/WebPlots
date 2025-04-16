@@ -41,4 +41,4 @@ The frontend uses an iframe with a blank target at the start. This iframe is upd
 
 ## Working Video
 
-![](assets/video.mp4)
+[Screencast](assets/video.mp4)
